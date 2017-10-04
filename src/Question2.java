@@ -32,11 +32,12 @@ public class Question2 {
 
        //go through the array
        for (int i = 0; i < array.length; i++) {
-     
-             
+     //comparing the next number in the array with the increment of 1
+           if(array[i+1] != array[i] + 1 ){
+            return array[i] + 1;   
+               
+           }
          } 
-       
-       
        
        return -1;
    }
@@ -47,15 +48,21 @@ public class Question2 {
         //testing 
         Question2 test = new Question2();
         //array 
-        int[] array = {0,1,2,3,5,6,7};
+        int[] array = {0,1,9,3,5,6,7};
         //sorting method 
         test.Sorting(array);
         //print sorted array 
         System.out.println("SORTED");
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            System.out.print(array[i]);
         }
+        //Space
+         System.out.println("");
+       
         
+        //finding the smallest missing number in the array
+        System.out.println("The smallest missing number in the array is: ");
+        System.out.println(test.smallestMissingNumbers(array));
         
         
         

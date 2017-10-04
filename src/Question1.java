@@ -18,23 +18,35 @@ public class Question1 {
         array[p2] = temp;
     }
 
-    public void Sorting(int[] array) {
+    public void Sortingefficiency(int[] array) {
+        //Variables
+        int minValue = 0;
+        int minIndex = 0;
+        int i;
+        int j;
         //keep track of of which positions we are sorting 
-        for (int position = 0; position < array.length; position++) {
-            //go through the numbers looking for the smallest number
-            for (int j = position + 1; j < array.length; j++) {
-                //is this the smallest number
-                if (array[j] < array[position]) {
-                    
-                    swap(array, j, position);
+        for (i = 0; i < array.length; i++) {
+            minValue = array[i];
+            minIndex = i;
+            for (j = i; j < array.length; j++) {
+                if (array[j] < minValue) {
+                    minValue = array[j];
+                    minIndex = j;
+
                 }
             }
+            if (minValue < array[i]) {
+                swap(array, i, minIndex);
+            }
+
         }
+
+
     }
 
     public static void main(String[] args) {
         Question1 test = new Question1();
-        
+
         //Array of Numbers
         int[] array = {12, 65, 18, 59, 78, 89, 2, 33};
 
@@ -43,11 +55,13 @@ public class Question1 {
             System.out.println(array[i]);
         }
         //sorting
-        test.Sorting(array);
+        test.Sortingefficiency(array);
 
-         System.out.println("AFTER");
-         for (int i = 0; i < array.length; i++) {
-             System.out.println(array[i]);
+        System.out.println("AFTER");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
+        
+        
     }
 }
