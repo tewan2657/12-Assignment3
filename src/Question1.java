@@ -28,14 +28,19 @@ public class Question1 {
         for (i = 0; i < array.length; i++) {
             minValue = array[i];
             minIndex = i;
+            //go through rest of the  array 
             for (j = i; j < array.length; j++) {
+                //if number at array[j] is less than minvalue
+                //assign that number the new min value 
                 if (array[j] < minValue) {
                     minValue = array[j];
                     minIndex = j;
 
                 }
             }
+            
             if (minValue < array[i]) {
+                //swap
                 swap(array, i, minIndex);
             }
 

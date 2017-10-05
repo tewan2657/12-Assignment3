@@ -50,7 +50,7 @@ public class Question3 {
         // Testing Method Above 
          Question3 test = new Question3();
          //array
-         int[] num = {1,0,0,1,1,1,0,1,0,1};
+         int[] num = {1,0,0,1,1,1,0,1,0,1,1,0,1,0};
          
          //sorting method
          test.sortBinary(num);
