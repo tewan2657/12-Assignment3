@@ -12,7 +12,13 @@ public class Question4 {
     /**
      * @param args the command line arguments
      */
+    public void countingSort(int[] array){
+        
+    }
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+       int[] array = new int[101]; 
     }
 }

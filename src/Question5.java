@@ -13,7 +13,7 @@ public class Question5 {
      * @param args the command line arguments
      */
      public void insertSort(String[]array){
-       String temp;
+         String temp;
         //go through the array 
          for (int i = 1; i < array.length; i++) {
              
@@ -21,13 +21,17 @@ public class Question5 {
              // A variable that stores numbers
              int position =i;
              //
-             while(position >=0 && hold.compareTo(array[i-1]) < 0){
-                 
-                  array[i] = array[i-1];
+             while(position >0 && hold.compareTo(array[position - 1]) < 0){
+                
+                 //swap
+                temp = array[position];
+                array[position] = array[i];
+                array[i] = temp;
                 position --; 
              }
-              array[i] = hold;   
-                 
+              array[position] = hold;   
+             
+   
              
              
          }
@@ -39,6 +43,7 @@ public class Question5 {
         //Testing
         Question5 test = new Question5();
         
+       
         //Array 
         String[] list = {"Blue", "Red", "Black", "Yellow", "Green"};
 
@@ -53,10 +58,14 @@ public class Question5 {
         //Insert Sort Method
         test.insertSort(list);
         
+        //after sorted  
+        System.out.println("AFTER SORTED");
         //Print out the array AFTER ITS SORTED 
         for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i]);
+            System.out.print(list[i] + ", ");
         }
+        //space
+        System.out.println("");
         
         
         
