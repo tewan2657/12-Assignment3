@@ -20,18 +20,18 @@ public class Question5 {
              String hold = array[i];
              // A variable that stores numbers
              int position =i;
-             //
+             //position is greater than 0 and compare array[i] to array[i-1] 
              while(position >0 && hold.compareTo(array[position - 1]) < 0){
                 
                  //swap
                 temp = array[position];
-                array[position] = array[i];
-                array[i] = temp;
+                array[position] = array[position - 1];
+                array[position - 1] = temp;
                 position --; 
              }
               array[position] = hold;   
              
-   
+    
              
              
          }
